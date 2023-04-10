@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Rectangle.h"
+#include "PDCurses/curses.h"
+// Exercise 9.11
 
 int main(){
     std::pair<int, int> dimensions = std::make_pair(17, 3);

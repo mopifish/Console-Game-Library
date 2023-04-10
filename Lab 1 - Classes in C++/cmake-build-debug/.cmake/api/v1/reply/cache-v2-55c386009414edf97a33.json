@@ -1362,6 +1362,18 @@
 			"value" : "C:/Users/picke/OneDrive/Documents/CS-145/Lab 1 - Classes in C++"
 		},
 		{
+			"name" : "PDCURSES_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "PDCURSES_LIBRARY-NOTFOUND"
+		},
+		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
 			"properties" : 
 			[

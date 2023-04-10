@@ -256,6 +256,9 @@ Lab_1___Classes_in_C___IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Lab_1___Classes_in_C___SOURCE_DIR:STATIC=C:/Users/picke/OneDrive/Documents/CS-145/Lab 1 - Classes in C++
 
+//Path to a library.
+PDCURSES_LIBRARY:FILEPATH=PDCURSES_LIBRARY-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries
