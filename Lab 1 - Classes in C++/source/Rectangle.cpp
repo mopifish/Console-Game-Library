@@ -2,7 +2,7 @@
 // Created by Drake on 4/6/2023.
 //
 
-#include "../include/Rectangle.h"
+#include "Rectangle.h"
 
 // -- Class Constants --
 const int Rectangle::MIN_WIDTH = 1;
@@ -69,8 +69,8 @@ int Rectangle::get_y_position() const {
 
 
 // -- Print Operator Override --
-std::ostream& operator<<(std::ostream& os, const Rectangle& obj) {\
-std::string rectangle_string = "";
+std::ostream& operator<<(std::ostream& os, const Rectangle& obj) {
+    std::string rectangle_string = "";
     // Offsets by Y position
     for (int i = 0; i < obj.get_y_position(); i++) {
         rectangle_string += "\n";
