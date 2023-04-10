@@ -152,6 +152,30 @@ source/Rectangle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.s
 .PHONY : source/Rectangle.cpp.s
 
+source/console_interface.obj: source/console_interface.cpp.obj
+.PHONY : source/console_interface.obj
+
+# target to build an object file
+source/console_interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.obj
+.PHONY : source/console_interface.cpp.obj
+
+source/console_interface.i: source/console_interface.cpp.i
+.PHONY : source/console_interface.i
+
+# target to preprocess a source file
+source/console_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.i
+.PHONY : source/console_interface.cpp.i
+
+source/console_interface.s: source/console_interface.cpp.s
+.PHONY : source/console_interface.s
+
+# target to generate assembly for a file
+source/console_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.s
+.PHONY : source/console_interface.cpp.s
+
 source/main.obj: source/main.cpp.obj
 .PHONY : source/main.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... source/Rectangle.obj
 	@echo ... source/Rectangle.i
 	@echo ... source/Rectangle.s
+	@echo ... source/console_interface.obj
+	@echo ... source/console_interface.i
+	@echo ... source/console_interface.s
 	@echo ... source/main.obj
 	@echo ... source/main.i
 	@echo ... source/main.s
