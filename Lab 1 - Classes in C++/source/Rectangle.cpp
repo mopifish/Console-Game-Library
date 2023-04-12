@@ -14,13 +14,17 @@ const int Rectangle::MIN_Y_POSITION = 0;
 
 
 // -- Default Constructor --
-Rectangle::Rectangle(std::pair<int, int> dimensions, std::pair<int, int> position) {
+Rectangle::Rectangle(std::pair<int, int> dimensions, std::pair<int, int> position, char character) {
     this->dimensions = dimensions;
     this->position = position;
+    this->character = character;
 }
 
 
 // -- Set Functions
+void Rectangle::set_character(char value) {
+    this->character = value;
+}
 void Rectangle::set_dimensions(std::pair<int, int> new_dimensions) {
      this->dimensions = std::make_pair(
              std::clamp(new_dimensions.first, MIN_WIDTH, MAX_WIDTH),
@@ -48,6 +52,9 @@ void Rectangle::set_y_position(int new_y_position) {
 
 
 // -- Get Functions --
+char Rectangle::get_character() const {
+    return this->character;
+}
 std::pair<int, int> Rectangle::get_dimensions() const {
     return this->dimensions;
 }
@@ -67,26 +74,20 @@ int Rectangle::get_y_position() const {
     return this->position.second;
 }
 
+std::string Rectangle::to_string() const {
+    std::string rectangle_string;
+
+    for (int i = 0; i < this->get_height(); i++) {
+        rectangle_string += std::string(this->get_width(), this->character) + "\n";
+    }
+
+    return rectangle_string;
+}
+
 
 // -- Print Operator Override --
 std::ostream& operator<<(std::ostream& os, const Rectangle& obj) {
-    std::string rectangle_string = "";
-    // Offsets by Y position
-    for (int i = 0; i < obj.get_y_position(); i++) {
-        rectangle_string += "\n";
-    }
-    for (int i = 0; i < obj.get_height(); i++) {
-        // Offsets by X position
-        rectangle_string += std::string(obj.get_x_position(), ' ');
-        // Adds characters for rectangle
-            // Character based method (5x5 characters)
-            //rectangle_string += std::string(obj.get_width(), '#') + "\n";
-        // Method that accounts for added vertical height
-        for (int j = 0; j < obj.get_width(); j++){
-            rectangle_string += "#  ";
-        }
-        rectangle_string += "\n";
-    }
+    std::string rectangle_string = obj.to_string();
 
     os << rectangle_string << std::endl;
     return os;

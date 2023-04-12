@@ -1,31 +1,33 @@
-#include <iostream>
 #include "Rectangle.h"
 #include "console_interface.h"
 // Exercise 9.11
 
 int main(){
-    // initialize PDCurses
-    curses::console_interface ci();
-    start_color();
 
+    // initialize PDCurses
+    curses::console_interface cons(/* is_color = */ true);
+
+    // Initialize rectangle
     std::pair<int, int> dimensions = std::make_pair(17, 3);
     std::pair<int, int> position = std::make_pair(10, 10);
+    Rectangle rect_1(dimensions, position);
 
-    Rectangle new_rect(dimensions, position);
+    // Initialize rectangle
+    dimensions = std::make_pair(5, 5);
+    position = std::make_pair(13, 4);
+    Rectangle rect_2(dimensions, position);
 
     // define color pairs
-    init_pair(1, COLOR_RED, COLOR_BLACK);
-    // set text color
-    attron(COLOR_PAIR(1)); // enable red text on black background
-    std::cout << new_rect;
-    attroff(COLOR_PAIR(1));
+    init_pair(1, COLOR_RED, COLOR_RED);
+    init_pair(2, COLOR_GREEN, COLOR_GREEN);
 
-    // refresh the screen to display changes
-    refresh();
+    cons.print(rect_1.to_string(), COLOR_PAIR(1), rect_1.get_x_position(), rect_1.get_y_position());
+    cons.print(rect_2.to_string(), COLOR_PAIR(2), rect_2.get_x_position(), rect_2.get_y_position());
+    //cons.print(rect_2.to_string());
+    cons.update();
 
     // wait for user input
     getch();
 
-    endwin();
     return 0;
 }
