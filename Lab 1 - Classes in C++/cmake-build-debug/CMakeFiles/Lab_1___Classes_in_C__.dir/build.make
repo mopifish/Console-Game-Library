@@ -113,11 +113,43 @@ CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\console_interface.cpp" -o CMakeFiles\Lab_1___Classes_in_C__.dir\source\console_interface.cpp.s
 
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj: CMakeFiles/Lab_1___Classes_in_C__.dir/flags.make
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj: CMakeFiles/Lab_1___Classes_in_C__.dir/includes_CXX.rsp
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj: C:/Users/Drake/OneDrive/Documents/CS-145/Lab\ 1\ -\ Classes\ in\ C++/source/Circle.cpp
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj: CMakeFiles/Lab_1___Classes_in_C__.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj -MF CMakeFiles\Lab_1___Classes_in_C__.dir\source\Circle.cpp.obj.d -o CMakeFiles\Lab_1___Classes_in_C__.dir\source\Circle.cpp.obj -c "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\Circle.cpp"
+
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\Circle.cpp" > CMakeFiles\Lab_1___Classes_in_C__.dir\source\Circle.cpp.i
+
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\Circle.cpp" -o CMakeFiles\Lab_1___Classes_in_C__.dir\source\Circle.cpp.s
+
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj: CMakeFiles/Lab_1___Classes_in_C__.dir/flags.make
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj: CMakeFiles/Lab_1___Classes_in_C__.dir/includes_CXX.rsp
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj: C:/Users/Drake/OneDrive/Documents/CS-145/Lab\ 1\ -\ Classes\ in\ C++/source/Shape.cpp
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj: CMakeFiles/Lab_1___Classes_in_C__.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj -MF CMakeFiles\Lab_1___Classes_in_C__.dir\source\Shape.cpp.obj.d -o CMakeFiles\Lab_1___Classes_in_C__.dir\source\Shape.cpp.obj -c "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\Shape.cpp"
+
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\Shape.cpp" > CMakeFiles\Lab_1___Classes_in_C__.dir\source\Shape.cpp.i
+
+CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\source\Shape.cpp" -o CMakeFiles\Lab_1___Classes_in_C__.dir\source\Shape.cpp.s
+
 # Object files for target Lab_1___Classes_in_C__
 Lab_1___Classes_in_C___OBJECTS = \
 "CMakeFiles/Lab_1___Classes_in_C__.dir/source/main.cpp.obj" \
 "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.obj" \
-"CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.obj"
+"CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.obj" \
+"CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj" \
+"CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj"
 
 # External object files for target Lab_1___Classes_in_C__
 Lab_1___Classes_in_C___EXTERNAL_OBJECTS =
@@ -125,11 +157,13 @@ Lab_1___Classes_in_C___EXTERNAL_OBJECTS =
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/source/main.cpp.obj
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.obj
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.obj
+Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj
+Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/build.make
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/linklibs.rsp
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/objects1.rsp
 Lab_1___Classes_in_C__.exe: CMakeFiles/Lab_1___Classes_in_C__.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Lab_1___Classes_in_C__.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Drake\OneDrive\Documents\CS-145\Lab 1 - Classes in C++\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Lab_1___Classes_in_C__.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lab_1___Classes_in_C__.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

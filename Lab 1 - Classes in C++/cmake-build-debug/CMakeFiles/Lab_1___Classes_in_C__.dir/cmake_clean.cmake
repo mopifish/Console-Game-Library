@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj"
+  "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj.d"
   "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.obj"
   "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.obj.d"
+  "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj"
+  "CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj.d"
   "CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.obj"
   "CMakeFiles/Lab_1___Classes_in_C__.dir/source/console_interface.cpp.obj.d"
   "CMakeFiles/Lab_1___Classes_in_C__.dir/source/main.cpp.obj"

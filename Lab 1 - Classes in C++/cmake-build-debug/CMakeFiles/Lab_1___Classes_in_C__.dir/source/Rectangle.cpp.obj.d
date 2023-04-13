@@ -1,6 +1,7 @@
 CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.obj: \
  C:\Users\Drake\OneDrive\Documents\CS-145\Lab\ 1\ -\ Classes\ in\ C++\source\Rectangle.cpp \
  C:/Users/Drake/OneDrive/DOCUME~1/CS-145/LAB1-C~1/include/Rectangle.h \
+ C:/Users/Drake/OneDrive/DOCUME~1/CS-145/LAB1-C~1/include/Shape.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \

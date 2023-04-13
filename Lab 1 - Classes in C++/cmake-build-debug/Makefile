@@ -128,6 +128,30 @@ Lab_1___Classes_in_C__/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/build
 .PHONY : Lab_1___Classes_in_C__/fast
 
+source/Circle.obj: source/Circle.cpp.obj
+.PHONY : source/Circle.obj
+
+# target to build an object file
+source/Circle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.obj
+.PHONY : source/Circle.cpp.obj
+
+source/Circle.i: source/Circle.cpp.i
+.PHONY : source/Circle.i
+
+# target to preprocess a source file
+source/Circle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.i
+.PHONY : source/Circle.cpp.i
+
+source/Circle.s: source/Circle.cpp.s
+.PHONY : source/Circle.s
+
+# target to generate assembly for a file
+source/Circle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Circle.cpp.s
+.PHONY : source/Circle.cpp.s
+
 source/Rectangle.obj: source/Rectangle.cpp.obj
 .PHONY : source/Rectangle.obj
 
@@ -151,6 +175,30 @@ source/Rectangle.s: source/Rectangle.cpp.s
 source/Rectangle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Rectangle.cpp.s
 .PHONY : source/Rectangle.cpp.s
+
+source/Shape.obj: source/Shape.cpp.obj
+.PHONY : source/Shape.obj
+
+# target to build an object file
+source/Shape.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.obj
+.PHONY : source/Shape.cpp.obj
+
+source/Shape.i: source/Shape.cpp.i
+.PHONY : source/Shape.i
+
+# target to preprocess a source file
+source/Shape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.i
+.PHONY : source/Shape.cpp.i
+
+source/Shape.s: source/Shape.cpp.s
+.PHONY : source/Shape.s
+
+# target to generate assembly for a file
+source/Shape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_1___Classes_in_C__.dir\build.make CMakeFiles/Lab_1___Classes_in_C__.dir/source/Shape.cpp.s
+.PHONY : source/Shape.cpp.s
 
 source/console_interface.obj: source/console_interface.cpp.obj
 .PHONY : source/console_interface.obj
@@ -209,9 +257,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Lab_1___Classes_in_C__
+	@echo ... source/Circle.obj
+	@echo ... source/Circle.i
+	@echo ... source/Circle.s
 	@echo ... source/Rectangle.obj
 	@echo ... source/Rectangle.i
 	@echo ... source/Rectangle.s
+	@echo ... source/Shape.obj
+	@echo ... source/Shape.i
+	@echo ... source/Shape.s
 	@echo ... source/console_interface.obj
 	@echo ... source/console_interface.i
 	@echo ... source/console_interface.s

@@ -84,13 +84,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/include/Circle.h">
+			<Option target="Lab_1___Classes_in_C__"/>
+		</Unit>
 		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/include/Rectangle.h">
+			<Option target="Lab_1___Classes_in_C__"/>
+		</Unit>
+		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/include/Shape.h">
 			<Option target="Lab_1___Classes_in_C__"/>
 		</Unit>
 		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/include/console_interface.h">
 			<Option target="Lab_1___Classes_in_C__"/>
 		</Unit>
+		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/source/Circle.cpp">
+			<Option target="Lab_1___Classes_in_C__"/>
+		</Unit>
 		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/source/Rectangle.cpp">
+			<Option target="Lab_1___Classes_in_C__"/>
+		</Unit>
+		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/source/Shape.cpp">
 			<Option target="Lab_1___Classes_in_C__"/>
 		</Unit>
 		<Unit filename="C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/source/console_interface.cpp">
