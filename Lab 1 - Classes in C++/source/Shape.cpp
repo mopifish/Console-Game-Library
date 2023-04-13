@@ -7,6 +7,18 @@
 const int Shape::MIN_X_POSITION = 0;
 const int Shape::MIN_Y_POSITION = 0;
 
+// -- Member Functions
+std::string Shape::pad_string(std::string str) {
+    std::string new_str;
+
+    for (char ch : str){
+        new_str += ' ';
+        new_str += ch;
+    }
+
+    return new_str;
+}
+
 // -- Set Functions --
 void Shape::set_character(char value) {
     this->character = value;
@@ -38,10 +50,9 @@ int Shape::get_y_position() const {
     return this->position.second;
 }
 
-// -- Print Functions --
-std::string Shape::to_string() const{
-    return "The to_string method has not been set";
-}
+
+//// -- Print Functions --
+
 
 // -- Print Operator Override --
 std::ostream& operator<<(std::ostream& os, const Shape& obj) {

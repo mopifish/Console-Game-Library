@@ -66,7 +66,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/Drake/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/include"
+					"path" : "C:/Users/picke/OneDrive/Documents/CS-145/Lab 1 - Classes in C++/include"
 				}
 			],
 			"language" : "CXX",
@@ -103,7 +103,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-LC:\\Users\\Drake\\OneDrive\\DOCUME~1\\CS-145\\LAB1-C~1\\library",
+				"fragment" : "-LC:\\Users\\picke\\OneDrive\\DOCUME~1\\CS-145\\LAB1-C~1\\library",
 				"role" : "libraryPath"
 			},
 			{

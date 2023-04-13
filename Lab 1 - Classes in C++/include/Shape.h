@@ -15,6 +15,9 @@ public:
     static const int MIN_X_POSITION;
     static const int MIN_Y_POSITION;
 
+    // -- Member Functions --
+    static std::string pad_string(std::string);
+
     // -- Set Functions --
     void set_character(char);
     void set_position(std::pair<int, int>);
@@ -28,7 +31,7 @@ public:
     int get_y_position() const;
 
     // -- Print Functions --
-    virtual std::string to_string() const;
+    virtual std::string to_string() const = 0; // Pure Virtual
 
 private:
     char character;

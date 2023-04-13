@@ -50,7 +50,7 @@ std::string Rectangle::to_string() const{
         rectangle_string += std::string(this->get_width(), this->get_character()) + "\n";
     }
 
-    return rectangle_string;
+    return this->pad_string(rectangle_string);
 }
 
 
