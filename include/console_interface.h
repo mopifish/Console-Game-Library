@@ -4,6 +4,7 @@
 
 #include "PDCurses/curses.h"
 #include <string>
+#include <vector>
 
 #ifndef LAB_1___CLASSES_IN_C___CONSOLEINTERFACE_H
 #define LAB_1___CLASSES_IN_C___CONSOLEINTERFACE_H
@@ -19,6 +20,7 @@ namespace curses {
         void print(std::string, chtype = 0, int = 0, int = 0);
 
         void update();
+
     };
 
 } // curses

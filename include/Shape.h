@@ -4,6 +4,7 @@
 #include <utility> // Include for Pair type
 #include <algorithm> // Include for clamp, max methods
 #include <iostream>
+#include <vector>
 #include <string>
 
 #ifndef LAB_1___CLASSES_IN_C___SHAPE_H
@@ -15,8 +16,11 @@ public:
     static const int MIN_X_POSITION;
     static const int MIN_Y_POSITION;
 
+    // -- Constructor Function --
+    Shape(std::pair<int, int>, char);
+
     // -- Member Functions --
-    static std::string pad_string(std::string);
+
 
     // -- Set Functions --
     void set_character(char);
@@ -26,16 +30,25 @@ public:
 
     // -- Get Functions --
     char get_character() const;
+    std::vector<std::vector<char>> get_raster_shape() const;
     std::pair<int, int> get_position() const;
     int get_x_position() const;
     int get_y_position() const;
 
     // -- Print Functions --
-    virtual std::string to_string() const = 0; // Pure Virtual
+    std::string to_string() const;
 
 private:
     char character;
+    std::vector<std::vector<char>> raster_shape;
     std::pair<int, int> position;
+
+protected:
+    // -- Set Functions --
+    void set_raster_shape(std::vector<std::vector<char>>);
+
+    // -- Helper Functions --
+    virtual std::vector<std::vector<char>> make_raster_shape() = 0; // pure virtual
 
 };
 

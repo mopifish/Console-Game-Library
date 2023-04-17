@@ -33,11 +33,13 @@ public:
     int get_width() const;
     int get_height() const;
 
-    // -- Print Functions --
-    std::string to_string() const override;
 
 private:
     std::pair<int, int> dimensions;
+
+protected:
+    // -- Helper function --
+    std::vector<std::vector<char>> make_raster_shape() override;
 
 };
 

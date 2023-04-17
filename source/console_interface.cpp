@@ -9,7 +9,7 @@ namespace curses {
     console_interface::console_interface(bool is_color) {
         initscr();
         if (is_color){ start_color(); }
-    }
+    };
 
     console_interface::~console_interface() {
         endwin();
@@ -34,5 +34,7 @@ namespace curses {
     void console_interface::update() {
         refresh();
     }
+
+
 
 } // curses

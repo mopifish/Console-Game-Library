@@ -11,10 +11,8 @@ const int Rectangle::MAX_WIDTH = 20;
 const int Rectangle::MAX_HEIGHT = 20;
 
 // -- Default Constructor --
-Rectangle::Rectangle(std::pair<int, int> dimensions, std::pair<int, int> position, char character) {
+Rectangle::Rectangle(std::pair<int, int> dimensions, std::pair<int, int> position, char character) : Shape(position, character) {
     this->set_dimensions(dimensions);
-    this->set_position(position);
-    this->set_character(character);
 }
 
 // -- Set Functions
@@ -23,12 +21,24 @@ void Rectangle::set_dimensions(std::pair<int, int> new_dimensions) {
              std::clamp(new_dimensions.first, MIN_WIDTH, MAX_WIDTH),
              std::clamp(new_dimensions.second, MIN_HEIGHT, MAX_HEIGHT)
              );
+
+    this->set_raster_shape(this->make_raster_shape());
 }
 void Rectangle::set_width(int new_width) {
-    this->dimensions.first = std::clamp(new_width, MIN_WIDTH, MAX_WIDTH);
+    this->set_dimensions (
+            std::make_pair (
+                    std::clamp(new_width, MIN_WIDTH, MAX_WIDTH),
+                    this->get_height()
+            )
+    );
 }
 void Rectangle::set_height(int new_height) {
-    this->dimensions.second = std::clamp(new_height, MIN_HEIGHT, MAX_HEIGHT);
+    this->set_dimensions (
+            std::make_pair (
+                    this->get_width(),
+                    this->dimensions.second = std::clamp(new_height, MIN_HEIGHT, MAX_HEIGHT)
+            )
+    );
 }
 
 // -- Get Functions --
@@ -42,17 +52,19 @@ int Rectangle::get_height() const {
     return this->dimensions.second;
 }
 
-// -- Print Functions --
-std::string Rectangle::to_string() const{
-    std::string rectangle_string;
+std::vector<std::vector<char>> Rectangle::make_raster_shape() {
+    std::vector<std::vector<char>> raster;
 
-    for (int i = 0; i < this->get_height(); i++) {
-        rectangle_string += std::string(this->get_width(), this->get_character()) + "\n";
+    for (int y = 0; y < this->get_height(); y++) {
+        std::vector<char> row;
+        for (int x = 0; x < this->get_width(); x++) {
+            row.push_back(this->get_character());
+        }
+        raster.push_back(row);
     }
 
-    return this->pad_string(rectangle_string);
+    return raster;
 }
-
 
 
 

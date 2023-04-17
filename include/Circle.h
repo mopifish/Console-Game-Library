@@ -21,12 +21,12 @@ public:
     int get_radius() const;
     int get_diameter() const;
 
-    std::string to_string() const override;
 
 private:
-
     int radius;
 
+    // -- Helper Functions --
+    std::vector<std::vector<char>> make_raster_shape() override;
 
 
 
