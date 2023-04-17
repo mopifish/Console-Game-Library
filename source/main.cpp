@@ -30,9 +30,11 @@ int main(){
     Rectangle rect_2(dimensions, position);
 
     // Initialize circle
-    position = std::make_pair(10, 10);
-    Circle circ(3, position);
+    position = std::make_pair(0, 0);
+    Circle circ(10, position);
 
+    position = std::make_pair(10, 5);
+    Circle circ2(5, position);
 
     // define color pairs
     init_pair(1, COLOR_RED, COLOR_BLACK);
@@ -40,8 +42,9 @@ int main(){
 
 
 //    cons.print(rect_1.to_string(), COLOR_PAIR(1), rect_1.get_x_position(), rect_1.get_y_position());
-    cons.print(pad_string(rect_2.to_string()), COLOR_PAIR(2), rect_2.get_x_position(), rect_2.get_y_position());
+   // cons.print(pad_string(rect_2.to_string()), COLOR_PAIR(2), rect_2.get_x_position(), rect_2.get_y_position());
     cons.print(pad_string(circ.to_string()), COLOR_PAIR(1), circ.get_x_position(), circ.get_y_position());
+    cons.print(pad_string(circ2.to_string()), COLOR_PAIR(2), circ2.get_x_position(), circ2.get_y_position());
 
     cons.update();
 

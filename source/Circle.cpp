@@ -31,18 +31,32 @@ int Circle::get_diameter() const {
 std::vector<std::vector<char>> Circle::make_raster_shape() {
     const int d = this->get_diameter();
     const int r = this->get_radius();
+    const char c = this->get_character();
 
-    std::vector<std::vector<char>> raster(d+1, std::vector<char>(d+1, 'x'));
+    std::vector<std::vector<char>> raster(d, std::vector<char>(d, ' '));
 
-    for (int y = r;  y > 0; y--){
+    for (int y = r; y > 0 ; y--) {
         // Circle equation: x^2 + y^2 = r^2
         // We have Y, and we have R, now solve for X.
         // x = sqrt(r^2 - y^2)
         // This gives us two possible answers for x, pos and neg
+        // We can then mirror this across the Y-axis
+
+
+        // Use the above equation to calculate the X position. Then round it to the nearest pixel
         int x = round(sqrt(pow(r, 2) - pow(y, 2)));
-        std::cout << abs(y-r) << ", " << x+r << " : " << x+r - (x+r)%r << std::endl;
-        raster[abs(y-r)][x+r] = this->get_character();
-        raster[abs(y-r)][] = this->get_character();
+
+        // Draw Circle
+        // Note: -1 must be added anytime X or Y is negative. This is to account for
+        // Vectors going from 0 to 19. Math is done in 0 to 20.
+        raster[abs(y-r)][abs(x-r)] = c; // Upper Mid Left
+        raster[abs(-y - r)-1][abs(x - r)] = c; // Lower Mid Left
+        raster[abs(y - r)][abs(-x-r)-1] = c; // Upper Mid Right
+        raster[abs(-y - r)-1][abs(-x - r)-1] = c; // Lower Mid Right
+        raster[abs(x-r)][abs(y - r )] = c; // Top Left
+        raster[abs(-x-r)-1][abs(y - r)] = c; // Bottom Left
+        raster[abs(-x -r)-1][abs(-y - r)-1] = c; // Bottom Right
+        raster[abs(x -r)][abs(-y - r) -1] = c; // Top Right
     }
 
     return raster;
