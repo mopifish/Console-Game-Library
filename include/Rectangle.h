@@ -18,7 +18,7 @@ public:
     static const int MAX_HEIGHT;
 
     // -- Default Constructor --
-    Rectangle(std::pair<int, int> = std::make_pair(1,1), std::pair<int, int> = std::make_pair(0,0), char = '#');
+    Rectangle(std::pair<int, int> = std::make_pair(1,1), std::pair<int, int> = std::make_pair(0,0), std::vector<short> = {2, 2, 2}, char = '#');
 
     // -- Member Functions --
 
@@ -39,7 +39,7 @@ private:
 
 protected:
     // -- Helper function --
-    std::vector<std::vector<char>> make_raster_shape() override;
+    std::vector<std::vector<short>> make_raster_shape() override;
 
 };
 

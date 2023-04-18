@@ -10,7 +10,7 @@
 
 class Circle : public Shape {
 public:
-    Circle(int = 1, std::pair<int, int> = std::make_pair(0, 0), char = '#');
+    Circle(int = 1, std::pair<int, int> = std::make_pair(0, 0), std::vector<short> = {1, 1, 1}, char = '#');
 
     // -- Set Functions --
     void set_radius(int);
@@ -26,7 +26,7 @@ private:
     int radius;
 
     // -- Helper Functions --
-    std::vector<std::vector<char>> make_raster_shape() override;
+    std::vector<std::vector<short>> make_raster_shape() override;
 
 
 

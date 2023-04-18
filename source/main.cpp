@@ -21,7 +21,7 @@ int main(){
 
     // Initialize rectangle
     std::pair<int, int> dimensions = std::make_pair(17, 3);
-    std::pair<int, int> position = std::make_pair(10, 10);
+    std::pair<int, int> position = std::make_pair(20, 20);
     Rectangle rect_1(dimensions, position);
 
     // Initialize rectangle
@@ -31,20 +31,29 @@ int main(){
 
     // Initialize circle
     position = std::make_pair(0, 0);
-    Circle circ(10, position);
+    std::vector<short> colors = {COLOR_CYAN, COLOR_BLUE, COLOR_WHITE};
+    Circle circ(10, position, colors, '~');
 
     position = std::make_pair(10, 5);
     Circle circ2(5, position);
 
-    // define color pairs
-    init_pair(1, COLOR_RED, COLOR_BLACK);
-    init_pair(2, COLOR_GREEN, COLOR_BLACK);
+    std::vector<std::vector<short>> raster_shape = circ.get_raster_shape();
+    for (int y = 0; y < raster_shape.size(); y++){
+        for (int x = 0; x < raster_shape[y].size(); x++){
+            // Get color of current grid space
+            int n = raster_shape[y][x];
 
+            //  If color pair does not exist, initialize it
+            if (init_pair(n+1, circ.get_character_color(), n) != OK){
+                init_pair(n+1, circ.get_character_color(), n);
+            }
 
-//    cons.print(rect_1.to_string(), COLOR_PAIR(1), rect_1.get_x_position(), rect_1.get_y_position());
-   // cons.print(pad_string(rect_2.to_string()), COLOR_PAIR(2), rect_2.get_x_position(), rect_2.get_y_position());
-    cons.print(pad_string(circ.to_string()), COLOR_PAIR(1), circ.get_x_position(), circ.get_y_position());
-    cons.print(pad_string(circ2.to_string()), COLOR_PAIR(2), circ2.get_x_position(), circ2.get_y_position());
+            // Str is doubled so shapes appear properly on console
+            std::string str(2, n != 0 ? circ.get_character() : ' ');
+            cons.print(str, COLOR_PAIR(n+1), x*2, y);
+        }
+    }
+    //cons.print(pad_string(circ2.to_string()), COLOR_PAIR(2), circ2.get_x_position(), circ2.get_y_position());
 
     cons.update();
 

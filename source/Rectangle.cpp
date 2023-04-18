@@ -11,7 +11,7 @@ const int Rectangle::MAX_WIDTH = 20;
 const int Rectangle::MAX_HEIGHT = 20;
 
 // -- Default Constructor --
-Rectangle::Rectangle(std::pair<int, int> dimensions, std::pair<int, int> position, char character) : Shape(position, character) {
+Rectangle::Rectangle(std::pair<int, int> dimensions, std::pair<int, int> position, std::vector<short> colors, char character) : Shape(position, character, colors) {
     this->set_dimensions(dimensions);
 }
 
@@ -52,18 +52,13 @@ int Rectangle::get_height() const {
     return this->dimensions.second;
 }
 
-std::vector<std::vector<char>> Rectangle::make_raster_shape() {
-    std::vector<std::vector<char>> raster;
+std::vector<std::vector<short>> Rectangle::make_raster_shape() {
 
-    for (int y = 0; y < this->get_height(); y++) {
-        std::vector<char> row;
-        for (int x = 0; x < this->get_width(); x++) {
-            row.push_back(this->get_character());
-        }
-        raster.push_back(row);
-    }
-
-    return raster;
+    // Generates 2d Vector of given height and given width, filled with given character
+    return std::vector<std::vector<short>> (
+            this->get_height(),
+            std::vector<short>(get_width(), this->get_fill_color())
+    );
 }
 
 
