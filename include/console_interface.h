@@ -14,13 +14,27 @@ namespace curses {
     class console_interface {
 
     public:
-        console_interface(bool);
+        console_interface(int = 100, int = 25, bool  = true);
         ~console_interface();
 
+        // -- Member Functions --
         void print(std::string, chtype = 0, int = 0, int = 0);
-
         void update();
 
+        // -- Set Functions --
+        void set_terminal_size(std::pair<int, int>);
+        void set_terminal_width(int);
+        void set_terminal_height(int);
+
+
+        // -- Get Functions --
+        std::pair<int, int> get_terminal_size() const;
+        int get_terminal_width() const;
+        int get_terminal_height() const;
+
+
+    private:
+        std::pair<int, int> terminal_size;
     };
 
 } // curses

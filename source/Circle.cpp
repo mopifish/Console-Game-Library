@@ -3,7 +3,7 @@
 //
 
 #include <cmath>
-#include "Circle.h"
+#include "PKArt/Circle.h"
 
 Circle::Circle(int radius, std::pair<int, int> position, std::vector<short> colors, char character) : Shape(position, character, colors) {
     this->set_radius(radius);
