@@ -2,7 +2,7 @@
 // Created by Drake PIckett on 4/18/2023.
 //
 
-#include "CGL.h"
+#include "CGL/CGL.h"
 #include <utility>
 
 CGL::CGL(int screen_width, int screen_height, std::vector<Shape*> game_objects) {
@@ -41,7 +41,7 @@ void CGL::add_game_object(Shape* game_object) {
     this->game_objects.push_back(game_object);
 }
 
-void CGL::blit(Shape* game_object, std::vector<std::vector<short>> *raster_screen) {
+void CGL::blit(Shape* game_object, std::vector<std::vector<short>>* raster_screen) {
     std::vector<std::vector<short>> raster_shape = game_object->get_raster_shape();
     const int shape_x_pos = game_object->get_x_position();
     const int shape_y_pos = game_object->get_y_position();

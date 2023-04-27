@@ -16,9 +16,6 @@ public:
     static const int MIN_X_POSITION;
     static const int MIN_Y_POSITION;
 
-    // -- Constructor Function --
-    Shape(std::pair<int, int>, char, std::vector<short>);
-
     // -- Member Functions --
 
 
@@ -53,6 +50,9 @@ private:
     short character_color;
 
 protected:
+    // -- Constructor Function --
+    Shape(std::pair<int, int>, char, std::vector<short>);
+
     // -- Set Functions --
     void set_raster_shape(std::vector<std::vector<short>>);
 

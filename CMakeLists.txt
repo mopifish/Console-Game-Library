@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.24)
-project(PKArt)
+project(Seagull)
 
 set(CMAKE_CXX_STANDARD 17)
 
 link_directories(library)
 include_directories(include)
 
-add_executable(PKArt source/main.cpp source/Rectangle.cpp include/PKArt/Rectangle.h source/console_interface.cpp include/console_interface.h source/Circle.cpp include/PKArt/Circle.h source/Shape.cpp include/PKArt/Shape.h source/CGL.cpp include/CGL.h)
+add_executable(Seagull source/main.cpp source/PKArt/Rectangle.cpp include/PKArt/Rectangle.h source/console_interface.cpp include/console_interface.h source/PKArt/Circle.cpp include/PKArt/Circle.h source/PKArt/Shape.cpp include/PKArt/Shape.h source/CGL/CGL.cpp include/CGL/CGL.h)
 
-target_link_libraries(PKArt pdcurses)
+target_link_libraries(Seagull pdcurses)
 
 
