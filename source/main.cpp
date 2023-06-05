@@ -1,7 +1,6 @@
 #include "PKArt/Rectangle.h"
 #include "PKArt/Circle.h"
 #include "CGL/CGL.h"
-// Exercise 9.11
 
 int main(){
     // Initialize Game Window
