@@ -5,7 +5,7 @@
 #include "CGL/CGL.h"
 #include <utility>
 
-CGL::CGL(int screen_width, int screen_height, std::vector<Shape*> game_objects) {
+CGL::CGL(int screen_width, int screen_height, std::vector<GameObject*> game_objects) {
     this->console = curses::console_interface(screen_width, screen_height);
     this->game_objects = std::move(game_objects);
 }
@@ -16,8 +16,13 @@ void CGL::render() {
             console.get_terminal_height(),
             std::vector<short>(console.get_terminal_width(), this->CLEAR_COLOR)
     );
-    for (Shape* object : this->game_objects) {
-        this->blit(object, &raster_screen);
+    for (GameObject* object : this->game_objects) {
+        for (Component* component : object->get_components()){
+            if (component->is_renderable){
+                this->blit(component->get_render_object(), &raster_screen);
+            }
+        }
+
     }
 
     for (int y = 0; y < raster_screen.size(); y++){
@@ -37,14 +42,14 @@ void CGL::render() {
     }
 }
 
-void CGL::add_game_object(Shape* game_object) {
+void CGL::add_game_object(GameObject* game_object) {
     this->game_objects.push_back(game_object);
 }
 
-void CGL::blit(Shape* game_object, std::vector<std::vector<short>>* raster_screen) {
-    std::vector<std::vector<short>> raster_shape = game_object->get_raster_shape();
-    const int shape_x_pos = game_object->get_x_position();
-    const int shape_y_pos = game_object->get_y_position();
+void CGL::blit(Shape* render_object, std::vector<std::vector<short>>* raster_screen) {
+    std::vector<std::vector<short>> raster_shape = render_object->get_raster_shape();
+    const int shape_x_pos = render_object->get_x_position();
+    const int shape_y_pos = render_object->get_y_position();
     const int shape_width = raster_shape[0].size();
     const int shape_height = raster_shape.size();
 

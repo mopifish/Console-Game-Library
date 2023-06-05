@@ -3,7 +3,7 @@
 //
 
 #include "PKArt/Rectangle.h"
-
+#include <bits/stdc++.h>
 // -- Class Constants --
 const int Rectangle::MIN_WIDTH = 1;
 const int Rectangle::MIN_HEIGHT = 1;
