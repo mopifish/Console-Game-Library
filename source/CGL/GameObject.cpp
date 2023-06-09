@@ -2,14 +2,19 @@
 // Created by picke on 4/27/2023.
 //
 
-#include <utility>
-
 #include "CGL/GameObject.h"
 
-GameObject::GameObject(std::vector<Component*> components) {
-    this->components = std::move(components);
+#include <utility>
+
+
+GameObject::GameObject(RenderComponent* render_component, PhysicsComponent* physics_component, InputComponent* input_component) {
+    this->render_component = render_component;
+    this->physics_component = physics_component;
+    this->input_component = input_component;
 }
 
-std::vector<Component *> GameObject::get_components() {
-    return this->components;
+void GameObject::_update(Renderer* renderer) {
+    render_component->update(renderer, this->physics_component);
+    input_component->update(this->physics_component);
+    physics_component->update();
 }

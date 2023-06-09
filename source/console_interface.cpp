@@ -8,6 +8,9 @@
 namespace curses {
     console_interface::console_interface(int terminal_width, int terminal_height, bool is_color) {
         initscr();
+        cbreak();
+        noecho();
+        nodelay(stdscr, true); // Set getch to non-blocking mode
         if (is_color){ start_color(); }
         this->set_terminal_size(std::make_pair(terminal_width, terminal_height));
     };

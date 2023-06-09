@@ -1,35 +1,25 @@
 //
-// Created by Drake Pickett on 4/18/2023.
-// CGL, Console Game Library, or the Seeg Library is a custom library meant for use in making
-// games for the windows terminal
+// Created by Drake on 6/9/2023.
+//
 
+#ifndef SEAGULL_CGL_H
+#define SEAGULL_CGL_H
 
-
-#ifndef PKART_CGENGINE_H
-#define PKART_CGENGINE_H
-
-#include <vector>
-
-#include "console_interface.h"
-#include "PKArt/PKArt.h"
-#include "GameObject.h"
+#include "CGL/Renderer.h"
+#include "CGL/GameObject.h"
 
 class CGL {
 public:
-    const short CLEAR_COLOR = COLOR_BLACK;
+    CGL(int = 600, int = 300);
 
-    CGL(int = 600, int = 300, std::vector<GameObject*> = std::vector<GameObject*>());
+    void loop();
 
-    void render();
-
-    void add_game_object(GameObject*);
-
-    void blit(Shape*, std::vector<std::vector<short>>*);
-
+    void add_game_object(GameObject* object);
 private:
-    curses::console_interface console;
+    void update();
+
+    Renderer renderer;
     std::vector<GameObject*> game_objects;
 };
 
-
-#endif //PKART_CGENGINE_H
+#endif //SEAGULL_CGL_H

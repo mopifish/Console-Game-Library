@@ -7,19 +7,18 @@
 
 #include <vector>
 
-#include "GameObject.h"
-#include "Component.h"
-#include "ShapeComponent.h"
+#include "Components.h"
 
 class GameObject {
 public:
-    GameObject(std::vector<Component*>);
+    GameObject(RenderComponent* render_component, PhysicsComponent* physics_component, InputComponent* input_component);
+
+    void _update(Renderer* renderer);
     virtual void update() = 0;
 
-    std::vector<Component*> get_components();
-private:
-    std::vector<Component*> components;
-
+    RenderComponent* render_component = nullptr;
+    PhysicsComponent* physics_component = nullptr;
+    InputComponent* input_component = nullptr;
 };
 
 
